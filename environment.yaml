@@ -1,4 +1,4 @@
-name: default
+name: AF3
 channels:
 - conda-forge
 - bioconda
@@ -6,6 +6,7 @@ channels:
 - nodefaults
 dependencies:
 - hmmer ==3.4
+- rdkit ==2024.3.5
 - git >=2.47.0,<3
 - wget >=1.21.4,<2
 - pip >=24.3.1,<25
@@ -26,8 +27,6 @@ dependencies:
   - jax-triton==0.2.0
   - jaxtyping
   - numpy
-  - rdkit==2024.3.5
   - triton==3.1.0
   - tqdm
   - zstandard
-
