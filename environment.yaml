@@ -1,10 +1,19 @@
 name: default
 channels:
 - conda-forge
+- bioconda
 - nvidia
 - nodefaults
 dependencies:
-- rdkit ==2024.3.5
+- hmmer ==3.4
+- git >=2.47.0,<3
+- wget >=1.21.4,<2
+- pip >=24.3.1,<25
+- curl >=8.10.1,<9
+- zstd >=1.5.6,<2
+- cmake >=3.30.5,<4
+- cuda ==12.6
+- cuda-toolkit ==12.6
 - python >=3.11
 - pip
 - pip:
