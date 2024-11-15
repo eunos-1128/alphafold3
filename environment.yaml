@@ -1,4 +1,4 @@
-name: AF3
+name: alphafold3
 channels:
 - conda-forge
 - bioconda
