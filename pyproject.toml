@@ -55,7 +55,7 @@ manylinux-x86_64-image = "manylinux_2_28"
 build_data = "alphafold3.build_data:build_data"
 
 [tool.pixi.project]
-channels = ["conda-forge", "nvidia"]
+channels = ["conda-forge", "bioconda", "nvidia"]
 platforms = ["linux-64"]
 
 [tool.pixi.pypi-dependencies]
@@ -68,4 +68,16 @@ test = { features = ["test"], solve-group = "default" }
 [tool.pixi.tasks]
 
 [tool.pixi.dependencies]
-rdkit = "==2024.3.5"
+hmmer = "==3.4"
+git = ">=2.47.0,<3"
+wget = ">=1.21.4,<2"
+pip = ">=24.3.1,<25"
+curl = ">=8.10.1,<9"
+zstd = ">=1.5.6,<2"
+cmake = ">=3.30.5,<4"
+cuda = "==12.6"
+cuda-toolkit = "==12.6"
+
+[tool.pixi.system-requirements]
+linux = "3.10.0"
+libc = "2.17"
