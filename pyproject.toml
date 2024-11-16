@@ -65,6 +65,47 @@ default = { solve-group = "default" }
 test = { features = ["test"], solve-group = "default" }
 
 [tool.pixi.tasks]
+build-data = "build_data"
+pred-a100-40gb = { 
+    cmd = [
+        "python",
+        "run_alphafold.py",
+        "--run_data_pipeline=true",
+        "--run_inference=true"
+    ]
+    env = { 
+        XLA_FLAGS = "--xla_gpu_enable_triton_gemm=false",
+        XLA_PYTHON_CLIENT_PREALLOCATE = true,
+        XLA_CLIENT_MEM_FRACTION = 0.95
+     }
+} 
+pred-a100-80gb = {
+    cmd = [
+        "python",
+        "run_alphafold.py",
+        "--run_data_pipeline=true",
+        "--run_inference=true"
+    ]
+    env = { 
+        XLA_FLAGS = "--xla_gpu_enable_triton_gemm=false",
+        XLA_PYTHON_CLIENT_PREALLOCATE = true,
+        XLA_CLIENT_MEM_FRACTION = 0.95
+     }
+}
+pred-v100-32gb = {
+    cmd = [
+        "python",
+        "run_alphafold.py",
+        "--run_data_pipeline=true",
+        "--run_inference=true",
+        "--flash_attention_implementation=xla"
+    ]
+    env = { 
+        XLA_FLAGS = "--xla_gpu_enable_triton_gemm=false",
+        XLA_PYTHON_CLIENT_PREALLOCATE = true,
+        XLA_CLIENT_MEM_FRACTION = 0.95
+     }
+}
 
 [tool.pixi.dependencies]
 hmmer = "==3.4"
