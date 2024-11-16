@@ -81,6 +81,7 @@ rdkit = "2024.3.5"
 scikit-build-core = ">=0.10.7,<0.11"
 pybind11 = ">=2.13.6,<3"
 ninja = ">=1.12.1,<2"
+gcc = ">=13.3.0,<13.4"
 
 [tool.pixi.system-requirements]
 linux = "3.10.0"
