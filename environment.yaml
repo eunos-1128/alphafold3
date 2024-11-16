@@ -1,4 +1,4 @@
-name: alphafold3
+name: AF3
 channels:
 - conda-forge
 - bioconda
@@ -6,7 +6,6 @@ channels:
 - nodefaults
 dependencies:
 - hmmer ==3.4
-- rdkit ==2024.3.5
 - git >=2.47.0,<3
 - wget >=1.21.4,<2
 - pip >=24.3.1,<25
@@ -15,7 +14,11 @@ dependencies:
 - cmake >=3.30.5,<4
 - cuda ==12.6
 - cuda-toolkit ==12.6
-- python >=3.11
+- python ==3.11
+- rdkit ==2024.3.5
+- scikit-build-core >=0.10.7,<0.11
+- pybind11 >=2.13.6,<3
+- ninja >=1.12.1,<2
 - pip
 - pip:
   - -e .
@@ -30,3 +33,5 @@ dependencies:
   - triton==3.1.0
   - tqdm
   - zstandard
+  - pytest>=8.3.3, <9
+
