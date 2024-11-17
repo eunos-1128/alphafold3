@@ -67,8 +67,6 @@ test = { features = ["test"], solve-group = "default" }
 [tool.pixi.tasks]
 build-data = "build_data"
 
-# pred-a100-40gb = { cmd = "python run_alphafold.py --run_data_pipeline=true --run_inference=true", env = { XLA_FLAGS = "--xla_gpu_enable_triton_gemm=false", XLA_PYTHON_CLIENT_PREALLOCATE = "true", XLA_CLIENT_MEM_FRACTION = 0.95 } }
-
 [tool.pixi.tasks.pred-a100-40gb]
 cmd = [
     "python",
@@ -113,7 +111,3 @@ scikit-build-core = ">=0.10.7,<0.11"
 pybind11 = ">=2.13.6,<3"
 ninja = ">=1.12.1,<2"
 gcc = ">=13.3.0,<13.4"
-
-[tool.pixi.system-requirements]
-linux = "3.10.0"
-libc = "2.17"
