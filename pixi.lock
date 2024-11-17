@@ -644,7 +644,7 @@ packages:
   name: alphafold3
   version: 3.0.0
   path: .
-  sha256: 2e08a481e8ad3feed6d907dee11a0c6ad75eadacaeb7608cce94c99597b4d7ef
+  sha256: aad825150375fc0a31b4b5db5445f04f22a4a63789bb6db2f4bd8768b85c58e9
   requires_dist:
   - absl-py
   - chex
